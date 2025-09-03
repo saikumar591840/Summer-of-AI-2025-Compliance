@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MemoryCare Companion</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>🧠 MemoryCare Companion</h1>
+      <div class="grid">
+        <section class="card">
+          <h2>Create Users</h2>
+          <label>Name <input id="u_name"></label>
+          <label>Role 
+            <select id="u_role">
+              <option>patient</option>
+              <option>caregiver</option>
+            </select>
+          </label>
+          <button id="btn_create_user">Create</button>
+          <pre id="users_out"></pre>
+        </section>
+        <section class="card">
+          <h2>Memories</h2>
+          <label>Patient ID <input id="m_pid" type="number"></label>
+          <label>Title <input id="m_title"></label>
+          <label>Content <textarea id="m_content"></textarea></label>
+          <button id="btn_add_memory">Add Memory</button>
+          <button id="btn_list_memory">List (by Patient)</button>
+          <pre id="mem_out"></pre>
+        </section>
+        <section class="card">
+          <h2>Reminders</h2>
+          <label>Patient ID <input id="r_pid" type="number"></label>
+          <label>Text <input id="r_text"></label>
+          <label>Time <input id="r_time" type="datetime-local"></label>
+          <button id="btn_add_rem">Add Reminder</button>
+          <button id="btn_list_rem">List (by Patient)</button>
+          <pre id="rem_out"></pre>
+        </section>
+      </div>
+
+      <section class="card">
+        <h2>Chat</h2>
+        <label>Patient ID <input id="c_pid" type="number"></label>
+        <label>Message <input id="c_msg"></label>
+        <button id="btn_send_chat">Send</button>
+        <div id="chat_box" class="chat"></div>
+      </section>
+
+      <footer>Demo client — set API URL in <code>app.js</code> if needed.</footer>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
